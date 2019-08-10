@@ -16,8 +16,10 @@ export default {
     };
   },
   created: function () {
+    let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    let targetUrl = 'http://numbersapi.com/42'
     axios
-      .get("http://numbersapi.com/42")
+      .get(proxyUrl + targetUrl)
       .then(response => {
         this.results = response.data;
       })
