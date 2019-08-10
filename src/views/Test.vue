@@ -17,7 +17,7 @@ export default {
   },
   created: function () {
     axios
-      .get("//numbersapi.com/42")
+      .get("http://numbersapi.com/42")
       .then(response => {
         this.results = response.data;
       })
